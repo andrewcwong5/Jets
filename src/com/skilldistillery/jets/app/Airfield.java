@@ -32,8 +32,42 @@ public class Airfield {
 			fleet.get(i).fly();
 		}
 	}
-	public void setAirfield() {
-		fleet.add(null);
+	public void loadCargo() {
+		for (int i = 0 ; i < fleet.size() ; i++) {
+			fleet.get(i).loadCargo();
+		}
+	}
+	public void fight() {
+		for (int i = 0 ; i < fleet.size(); i++) {
+			fleet.get(i).fight();
+		}
+	}
+	public void deleteJet(int i) {
+		
+		fleet.remove(i);
+		
 	}
 	
+	public void fastestJet() {
+		double fastest = 0;
+		Jet j = null;
+		for (int i = 0 ; i < fleet.size(); i++) {
+			if (fleet.get(i).getSpeed() > fastest) {
+				fastest = fleet.get(i).getSpeed();
+				j = fleet.get(i);
+			}
+		}
+		System.out.println("The fastest Jet in the fleet is :" + j);
+	}
+	public void longestRange() {
+		double longest = 0;
+		Jet j = null;
+		for (int i = 0 ; i < fleet.size(); i++) {
+			if (fleet.get(i).getRange() > longest) {
+				longest = fleet.get(i).getSpeed();
+				j = fleet.get(i);
+			}
+		}
+		System.out.println("The longest range jet in the fleet is :" + j);
+	}
 }

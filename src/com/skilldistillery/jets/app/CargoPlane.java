@@ -8,9 +8,10 @@ public class CargoPlane extends Jet {
 		super(model, speed, range, price);
 	}
 	// Methods
+	@Override
 	public void loadCargo() {
-		String load = "Loading cargo" ;
-		System.out.println(load);
+		String load = "is loading cargo" ;
+		System.out.println(getModel() + load + " and transporting it " + getRange() + " miles");
 	}
 	
 	@Override

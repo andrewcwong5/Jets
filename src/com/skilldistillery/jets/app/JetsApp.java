@@ -96,16 +96,29 @@ public class JetsApp {
 				case 2:			
 					af.flyAll();
 					break;
-				case 3: //view fast jet
-					fastestJet(jets);
+				case 3: 				//view fast jet
+					af.fastestJet();
 					break;
-				case 4:	//jet with longest range
-					longestRange(jets);
+				case 4:					//jet with longest range
+					af.longestRange();
 					break;
-				case 7: //add a single jet to fleet
+				case 5:
+					af.loadCargo();
+					break;
+				case 6:
+					af.fight();
+					break;
+				case 7: 				//add a single jet to fleet
 					addAJet();
 					break;
-				case 9: //quit program
+				case 8:
+					int i;
+					System.out.println(af.getJets());
+					System.out.println("Which Jet index to remove? ");
+					i = kb.nextInt();
+					af.deleteJet(i);
+					break;
+				case 9: 				//quit program
 					isChoose = false;
 					break;	
 				default:
@@ -114,10 +127,6 @@ public class JetsApp {
 			}
 		}		
 	
-		
-	public void fastestJet(ArrayList<Jet> list) {
-//		Jet.getSpeed();
-	}
 	public void longestRange(ArrayList<Jet> list) {
 		
 	}

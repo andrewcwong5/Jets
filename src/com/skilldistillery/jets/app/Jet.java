@@ -64,4 +64,8 @@ public abstract class Jet{
 		double time = range / speed ;
 		System.out.println(model + " is flying at speed of " + speed + "mph and can fly for " + time + " hours") ;
 	}
+	public void loadCargo() {
+	}
+	public void fight() {
+	}
 }
