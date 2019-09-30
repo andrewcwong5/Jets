@@ -6,6 +6,9 @@ public class JetImpl extends Jet{
 		super(model, speed, range, price);
 	}
 
-	
+	@Override
+	public String toString() {
+		return "Civilian Plane [model=" + getModel() + ", speed=" + getSpeed() + ", range=" + getRange() + ", price=" + getPrice() + "]\n";
+	}
 
 }

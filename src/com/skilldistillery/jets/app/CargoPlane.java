@@ -12,4 +12,9 @@ public class CargoPlane extends Jet {
 		String load = "Loading cargo" ;
 		System.out.println(load);
 	}
+	
+	@Override
+	public String toString() {
+		return "Cargo Plane [model=" + getModel() + ", speed=" + getSpeed() + ", range=" + getRange() + ", price=" + getPrice() + "]\n";
+	}
 }

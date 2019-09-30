@@ -1,5 +1,7 @@
 package com.skilldistillery.jets.app;
 
+import java.util.ArrayList;
+
 public abstract class Jet{
 
 	
@@ -58,8 +60,8 @@ public abstract class Jet{
 	public String toString() {
 		return "Jet [model=" + model + ", speed=" + speed + ", range=" + range + ", price=" + price + "]";
 	}
-	
 	public void fly() {
-		System.out.println(model + " is flying");
+		double time = range / speed ;
+		System.out.println(model + " is flying at speed of " + speed + "mph and can fly for " + time + " hours") ;
 	}
 }
